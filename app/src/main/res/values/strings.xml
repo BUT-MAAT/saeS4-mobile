@@ -1,0 +1,5 @@
+<resources>
+    <string name="api_url">http://192.168.246.1:9000/api%s</string>
+
+    <string name="app_name">saeS4-mobile</string>
+</resources>
