@@ -7,6 +7,10 @@ import android.os.Bundle;
 import android.os.StrictMode;
 import android.view.View;
 import android.widget.Button;
+import android.widget.FrameLayout;
+import android.widget.HorizontalScrollView;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import org.json.JSONArray;
@@ -35,11 +39,31 @@ public class MainActivity extends AppCompatActivity {
                 fetch();
             }
         });
+
+        LinearLayout collapseCatergorieLayout = (LinearLayout) findViewById(R.id.categorie_collapse_parent);
+        LinearLayout collapseSsCatergorieLayout = (LinearLayout) findViewById(R.id.sscategorie_collapse_parent);
+        LinearLayout collapseSsssCatergorieLayout = (LinearLayout) findViewById(R.id.sssscategorie_collapse_parent);
+
+        collapseCatergorieLayout.setOnClickListener(new CollapseLayoutListener(
+                (FrameLayout) findViewById(R.id.categorie_collapse_mainLayout),
+                (HorizontalScrollView) findViewById(R.id.categorie_collapse_child_horizontalScrollView),
+                (ImageView) findViewById(R.id.categorie_collapse_arrow)
+        ));
+        collapseSsCatergorieLayout.setOnClickListener(new CollapseLayoutListener(
+                (FrameLayout) findViewById(R.id.sscategorie_collapse_mainLayout),
+                (HorizontalScrollView) findViewById(R.id.sscategorie_collapse_child_horizontalScrollView),
+                (ImageView) findViewById(R.id.sscategorie_collapse_arrow)
+        ));
+        collapseSsssCatergorieLayout.setOnClickListener(new CollapseLayoutListener(
+                (FrameLayout) findViewById(R.id.sssscategorie_collapse_mainLayout),
+                (HorizontalScrollView) findViewById(R.id.sssscategorie_collapse_child_horizontalScrollView),
+                (ImageView) findViewById(R.id.sssscategorie_collapse_arrow)
+        ));
     }
 
     private void fetch() {
         TextView debugZone = (TextView) findViewById(R.id.debug_zone);
-        AsyncTask<String, Void, JSONArray> task = new RetrieveAlimentTask(this, debugZone);
+        AsyncTask<String, Void, JSONArray> task = new RetreiveAlimentTask(this, debugZone);
         task.execute();
     }
 }

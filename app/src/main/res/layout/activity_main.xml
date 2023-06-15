@@ -1,21 +1,155 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:gravity="center"
+    android:gravity="center_horizontal"
     android:orientation="vertical">
 
-    <com.google.android.material.appbar.CollapsingToolbarLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="green"
-        >
+        android:layout_margin="30dp"
+        android:orientation="vertical">
 
-    </com.google.android.material.appbar.CollapsingToolbarLayout>
+        <FrameLayout
+            android:id="@+id/categorie_collapse_mainLayout"
+            style="@style/CollapseLayout.MainLayout">
 
+            <HorizontalScrollView
+                android:id="@+id/categorie_collapse_child_horizontalScrollView"
+                style="@style/CollapseLayout.Child.HorizontalScrollView">
+
+                <LinearLayout
+                    style="@style/CollapseLayout.Child.PillContainer">
+
+                    <com.google.android.material.button.MaterialButton
+                        style="@style/CollapseLayout.Child.Pill"
+                        android:background="@drawable/pill_button_bg"
+                        android:text="Test"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        style="@style/CollapseLayout.Child.Pill"
+                        android:background="@drawable/pill_button_bg"
+                        android:text="Test"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        style="@style/CollapseLayout.Child.Pill"
+                        android:background="@drawable/pill_button_bg"
+                        android:text="Test"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        style="@style/CollapseLayout.Child.Pill"
+                        android:background="@drawable/pill_button_bg"
+                        android:text="Test"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        style="@style/CollapseLayout.Child.Pill"
+                        android:background="@drawable/pill_button_bg"
+                        android:text="Test"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        style="@style/CollapseLayout.Child.Pill"
+                        android:background="@drawable/pill_button_bg"
+                        android:text="Test"/>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <LinearLayout
+                android:id="@+id/categorie_collapse_parent"
+                style="@style/CollapseLayout.Parent">
+
+                <TextView
+                    android:id="@+id/categorie_collapse_title"
+                    style="@style/CollapseLayout.Parent.Title" />
+
+                <ImageView
+                    android:id="@+id/categorie_collapse_arrow"
+                    style="@style/CollapseLayout.Parent.Arrow" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <FrameLayout
+            style="@style/CollapseLayout.MainLayout"
+            android:id="@+id/sscategorie_collapse_mainLayout">
+            <HorizontalScrollView
+                android:id="@+id/sscategorie_collapse_child_horizontalScrollView"
+                style="@style/CollapseLayout.Child.HorizontalScrollView">
+
+                <LinearLayout
+                    style="@style/CollapseLayout.Child.PillContainer">
+
+                    <com.google.android.material.button.MaterialButton
+                        style="@style/CollapseLayout.Child.Pill"
+                        android:background="@drawable/pill_button_bg"
+                        android:text="Test"/>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <LinearLayout
+                android:id="@+id/sscategorie_collapse_parent"
+                style="@style/CollapseLayout.Parent">
+
+                <TextView
+                    android:id="@+id/sscategorie_collapse_title"
+                    style="@style/CollapseLayout.Parent.Title" />
+
+                <ImageView
+                    android:id="@+id/sscategorie_collapse_arrow"
+                    style="@style/CollapseLayout.Parent.Arrow" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/sssscategorie_collapse_mainLayout"
+            style="@style/CollapseLayout.MainLayout">
+
+            <HorizontalScrollView
+                android:id="@+id/sssscategorie_collapse_child_horizontalScrollView"
+                style="@style/CollapseLayout.Child.HorizontalScrollView">
+
+                <LinearLayout
+                    style="@style/CollapseLayout.Child.PillContainer">
+
+                    <com.google.android.material.button.MaterialButton
+                        style="@style/CollapseLayout.Child.Pill"
+                        android:background="@drawable/pill_button_bg"
+                        android:text="Test"/>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <LinearLayout
+                android:id="@+id/sssscategorie_collapse_parent"
+                style="@style/CollapseLayout.Parent">
+
+                <TextView
+                    android:id="@+id/sssscategorie_collapse_title"
+                    style="@style/CollapseLayout.Parent.Title" />
+
+                <ImageView
+                    android:id="@+id/sssscategorie_collapse_arrow"
+                    style="@style/CollapseLayout.Parent.Arrow" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+<!--  DEBUG  -->
     <TextView
         android:id="@+id/debug_zone"
         android:layout_width="wrap_content"

@@ -16,12 +16,12 @@ import com.google.firebase.crashlytics.buildtools.reloc.org.apache.http.util.Ent
 import org.json.JSONArray;
 import org.json.JSONException;
 
-class RetrieveAlimentTask extends AsyncTask<String, Void, JSONArray> {
+class RetreiveAlimentTask extends AsyncTask<String, Void, JSONArray> {
 
     private Activity activity;
     private TextView debugZone;
 
-    public RetrieveAlimentTask(Activity activity, TextView debugZone) {
+    public RetreiveAlimentTask(Activity activity, TextView debugZone) {
         super();
         this.activity = activity;
         this.debugZone = debugZone;

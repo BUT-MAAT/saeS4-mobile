@@ -2,4 +2,6 @@
     <string name="api_url">http://192.168.246.1:9000/api%s</string>
 
     <string name="app_name">saeS4-mobile</string>
+
+    <string name="catergorie_collapse_title">Categorie : %s</string>
 </resources>

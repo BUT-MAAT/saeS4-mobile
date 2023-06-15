@@ -6,5 +6,10 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+<!--    <color name="white">#FFFFFFFF</color>-->
+
+    <color name="dark_blue">#ff18314f</color>
+    <color name="light_blue">#ff8bbeb2</color>
+    <color name="white">#fffbfbff</color>
+    <color name="active">#ffC8F24F</color>
 </resources>
