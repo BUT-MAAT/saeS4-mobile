@@ -1,17 +1,15 @@
 package com.example.saes4_mobile.pillfactories;
 
 import android.app.Activity;
-import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import com.example.saes4_mobile.R;
+import com.example.saes4_mobile.listeners.AlimentOnClickListener;
 import com.google.android.material.button.MaterialButton;
 
 public class AlimentPillFactory extends PillFactory {
-
-    @Override
-    public MaterialButton createPill(Activity activity, int categoryId, String categoryName) {
-        MaterialButton pill = super.createBasePill(activity, categoryName, R.style.Aliment_Pill);
+    public MaterialButton createPill(Activity activity, int alimentId, String alimentName) {
+        MaterialButton pill = super.createBasePill(activity, alimentName, R.style.Aliment_Pill);
 
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.MATCH_PARENT,
@@ -20,7 +18,7 @@ public class AlimentPillFactory extends PillFactory {
         params.setMargins(5, 3, 5, 3);
         pill.setLayoutParams(params);
 
-//        pill.setOnClickListener(new CategoryOnClickListener(activity, categoryId, categoryName));
+        pill.setOnClickListener(new AlimentOnClickListener(activity, alimentId));
 
         return pill;
     }

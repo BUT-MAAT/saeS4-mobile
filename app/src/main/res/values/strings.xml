@@ -1,14 +1,15 @@
 <resources>
-    <string name="api_url">http://10.10.25.27:9000/api/%s</string>
+    <string name="app_name">Sondage habitudes de consommation</string>
+
+    <string name="api_url">http://192.168.1.12:9000/api/%s</string>
     <string name="api_categories_all_path">categories/categorie/all</string>
     <string name="api_categories_byParentId_path">categories/by_parent/%d</string>
     <string name="api_aliments_byCategoryId_path">aliment/by_soussouscategorie/%d?valeurs_nutritives=false</string>
-
-    <string name="app_name">saeS4-mobile</string>
 
     <string name="catergorie_collapse_title">Categorie : %s</string>
     <string name="sscatergorie_collapse_title">Sous Categorie : %s</string>
     <string name="sssscatergorie_collapse_title">Sous Sous Categorie : %s</string>
 
     <string name="no_aliments_message">Aucun aliment pour l\'instant</string>
+    <string name="aliments_title">Aliments</string>
 </resources>

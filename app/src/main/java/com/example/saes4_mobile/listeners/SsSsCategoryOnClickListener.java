@@ -9,9 +9,7 @@ import android.widget.TextView;
 
 import com.example.saes4_mobile.R;
 import com.example.saes4_mobile.fetchtasks.RetreiveAlimentsTask;
-import com.example.saes4_mobile.fetchtasks.RetreiveCategoriesTask;
 import com.example.saes4_mobile.pillfactories.AlimentPillFactory;
-import com.example.saes4_mobile.pillfactories.SsSsCategoryPillFactory;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

@@ -1,16 +1,11 @@
 package com.example.saes4_mobile.fetchtasks;
 
-import static android.content.ContentValues.TAG;
-
 import android.app.Activity;
 import android.os.Handler;
-import android.util.Log;
-import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.example.saes4_mobile.R;
-import com.example.saes4_mobile.pillfactories.CategoryPillFactory;
 import com.example.saes4_mobile.pillfactories.PillFactory;
 import com.google.firebase.crashlytics.buildtools.reloc.org.apache.http.HttpResponse;
 import com.google.firebase.crashlytics.buildtools.reloc.org.apache.http.client.HttpClient;

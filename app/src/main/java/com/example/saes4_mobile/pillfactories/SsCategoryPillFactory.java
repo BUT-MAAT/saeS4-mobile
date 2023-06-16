@@ -1,10 +1,8 @@
 package com.example.saes4_mobile.pillfactories;
 
 import android.app.Activity;
-import android.content.Context;
 
 import com.example.saes4_mobile.R;
-import com.example.saes4_mobile.listeners.CategoryOnClickListener;
 import com.example.saes4_mobile.listeners.SsCategoryOnClickListener;
 import com.google.android.material.button.MaterialButton;
 

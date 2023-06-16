@@ -1,9 +1,5 @@
 package com.example.saes4_mobile.listeners;
 
-import static android.content.ContentValues.TAG;
-
-import android.app.Activity;
-import android.util.Log;
 import android.view.View;
 
 public class CollapseLayoutListener implements View.OnClickListener {

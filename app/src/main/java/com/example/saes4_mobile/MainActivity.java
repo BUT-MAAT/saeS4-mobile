@@ -1,7 +1,5 @@
 package com.example.saes4_mobile;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -10,6 +8,8 @@ import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.saes4_mobile.fetchtasks.RetreiveCategoriesTask;
 import com.example.saes4_mobile.listeners.CollapseLayoutListener;
