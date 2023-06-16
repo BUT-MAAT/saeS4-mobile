@@ -8,8 +8,8 @@ import com.google.android.material.button.MaterialButton;
 
 public abstract class PillFactory {
 
-    protected MaterialButton createBasePill(Activity activity, String title) {
-        MaterialButton pill = new MaterialButton(new ContextThemeWrapper(activity, R.style.CollapseLayout_Child_Pill), null, 0);
+    protected MaterialButton createBasePill(Activity activity, String title, int themeRef) {
+        MaterialButton pill = new MaterialButton(new ContextThemeWrapper(activity, themeRef), null, 0);
         pill.setText(title);
         pill.setBackgroundDrawable(activity.getDrawable(R.drawable.pill_button_bg));
 

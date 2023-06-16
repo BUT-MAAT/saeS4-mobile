@@ -9,6 +9,7 @@ import android.widget.FrameLayout;
 import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.example.saes4_mobile.fetchtasks.RetreiveCategoriesTask;
 import com.example.saes4_mobile.listeners.CollapseLayoutListener;
@@ -27,6 +28,16 @@ public class MainActivity extends AppCompatActivity {
         LinearLayout collapseCatergorieLayout = (LinearLayout) findViewById(R.id.categorie_collapse_parent);
         LinearLayout collapseSsCatergorieLayout = (LinearLayout) findViewById(R.id.sscategorie_collapse_parent);
         LinearLayout collapseSsssCatergorieLayout = (LinearLayout) findViewById(R.id.sssscategorie_collapse_parent);
+
+        ((TextView) findViewById(R.id.categorie_collapse_title)).setText(
+                String.format(getString(R.string.catergorie_collapse_title), "Aucune")
+        );
+        ((TextView) findViewById(R.id.sscategorie_collapse_title)).setText(
+                String.format(getString(R.string.sscatergorie_collapse_title), "Aucune")
+        );
+        ((TextView) findViewById(R.id.sssscategorie_collapse_title)).setText(
+                String.format(getString(R.string.sssscatergorie_collapse_title), "Aucune")
+        );
 
         collapseCatergorieLayout.setOnClickListener(new CollapseLayoutListener(
                 (FrameLayout) findViewById(R.id.categorie_collapse_mainLayout),

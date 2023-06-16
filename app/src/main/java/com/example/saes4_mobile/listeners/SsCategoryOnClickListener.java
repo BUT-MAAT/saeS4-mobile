@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Handler;
 import android.os.Looper;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.saes4_mobile.R;
@@ -29,12 +30,16 @@ public class SsCategoryOnClickListener implements View.OnClickListener {
     public void onClick(View v) {
         TextView categoryTitle = activity.findViewById(R.id.sscategorie_collapse_title);
         categoryTitle.setText(
-                String.format(activity.getString(R.string.catergorie_collapse_title), categoryName)
+                String.format(activity.getString(R.string.sscatergorie_collapse_title), categoryName)
+        );
+        ((LinearLayout) activity.findViewById(R.id.sssscategorie_insert_layout)).removeAllViews();
+        ((TextView) activity.findViewById(R.id.sssscategorie_collapse_title)).setText(
+                String.format(activity.getString(R.string.sssscatergorie_collapse_title), "Aucune")
         );
         ExecutorService executor = Executors.newSingleThreadExecutor();
         executor.execute(
             new RetreiveCategoriesTask(activity,
-                    String.format(activity.getString(R.string.api_categories_byId_path), categoryId),
+                    String.format(activity.getString(R.string.api_categories_byParentId_path), categoryId),
                     activity.findViewById(R.id.sssscategorie_insert_layout),
                     new SsSsCategoryPillFactory(),
                     new Handler(Looper.getMainLooper())

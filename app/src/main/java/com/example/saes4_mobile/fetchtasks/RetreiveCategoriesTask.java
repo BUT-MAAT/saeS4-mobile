@@ -5,6 +5,7 @@ import static android.content.ContentValues.TAG;
 import android.app.Activity;
 import android.os.Handler;
 import android.util.Log;
+import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
@@ -66,14 +67,17 @@ public class RetreiveCategoriesTask implements Runnable {
                         if (categories == null) Toast.makeText(activity,"Fetch result is null", Toast.LENGTH_SHORT);
                         else {
                             categoryLinearLayout.removeAllViews();
-                            for(int i = 0; i < categories.length(); i++) {
-                                JSONObject aliment = categories.getJSONObject(i);
+                            for (int i = 0; i < categories.length(); i++) {
+                                JSONObject category = categories.getJSONObject(i);
                                 categoryLinearLayout.addView(
                                         pillFactory.createPill(activity,
-                                                (Integer) aliment.get("id_categorie"),
-                                                (String) aliment.get("nom_categorie")
+                                                (Integer) category.get("id_categorie"),
+                                                (String) category.get("nom_categorie")
                                         )
                                 );
+                            }
+                            if (categories.length() == 1) {
+                                categoryLinearLayout.getChildAt(0).callOnClick();
                             }
                         }
                     } catch (JSONException e) {
