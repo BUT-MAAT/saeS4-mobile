@@ -1,4 +1,4 @@
-package com.example.saes4_mobile;
+package com.example.saes4_mobile.listeners;
 
 import static android.content.ContentValues.TAG;
 
@@ -24,8 +24,6 @@ public class CollapseLayoutListener implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
-        Log.d(TAG, "WORKS");
-
         int height = v.getHeight();
 
         if (collapsed) {

@@ -2,28 +2,20 @@ package com.example.saes4_mobile;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.StrictMode;
-import android.view.View;
-import android.widget.Button;
+import android.os.Handler;
+import android.os.Looper;
 import android.widget.FrameLayout;
 import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-import org.json.JSONTokener;
+import com.example.saes4_mobile.fetchtasks.RetreiveCategoriesTask;
+import com.example.saes4_mobile.listeners.CollapseLayoutListener;
+import com.example.saes4_mobile.pillfactories.CategoryPillFactory;
 
-import java.io.IOException;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.net.URLConnection;
-import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,14 +23,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        Button button = (Button) findViewById(R.id.btn_fetch);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                fetch();
-            }
-        });
 
         LinearLayout collapseCatergorieLayout = (LinearLayout) findViewById(R.id.categorie_collapse_parent);
         LinearLayout collapseSsCatergorieLayout = (LinearLayout) findViewById(R.id.sscategorie_collapse_parent);
@@ -59,11 +43,16 @@ public class MainActivity extends AppCompatActivity {
                 (HorizontalScrollView) findViewById(R.id.sssscategorie_collapse_child_horizontalScrollView),
                 (ImageView) findViewById(R.id.sssscategorie_collapse_arrow)
         ));
-    }
 
-    private void fetch() {
-        TextView debugZone = (TextView) findViewById(R.id.debug_zone);
-        AsyncTask<String, Void, JSONArray> task = new RetreiveAlimentTask(this, debugZone);
-        task.execute();
+        fetchFirstCategories();
+    }
+    private void fetchFirstCategories() {
+        LinearLayout categoryLinearLayout = (LinearLayout) findViewById(R.id.categorie_insert_layout);
+        ExecutorService executor = Executors.newSingleThreadExecutor();
+        executor.execute(new RetreiveCategoriesTask(this,
+                getString(R.string.api_categories_all_path),
+                categoryLinearLayout,
+                new CategoryPillFactory(),
+                new Handler(Looper.getMainLooper())));
     }
 }

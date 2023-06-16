@@ -1,5 +1,7 @@
 <resources>
-    <string name="api_url">http://192.168.246.1:9000/api%s</string>
+    <string name="api_url">http://192.168.246.1:9000/api/%s</string>
+    <string name="api_categories_all_path">categories/categorie/all</string>
+    <string name="api_categories_byId_path">categories/by_parent/%d</string>
 
     <string name="app_name">saeS4-mobile</string>
 

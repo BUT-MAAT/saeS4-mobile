@@ -24,27 +24,8 @@
                 style="@style/CollapseLayout.Child.HorizontalScrollView">
 
                 <LinearLayout
+                    android:id="@+id/categorie_insert_layout"
                     style="@style/CollapseLayout.Child.PillContainer">
-
-                    <com.google.android.material.button.MaterialButton
-                        style="@style/CollapseLayout.Child.Pill"
-                        android:background="@drawable/pill_button_bg"
-                        android:text="Test"/>
-
-                    <com.google.android.material.button.MaterialButton
-                        style="@style/CollapseLayout.Child.Pill"
-                        android:background="@drawable/pill_button_bg"
-                        android:text="Test"/>
-
-                    <com.google.android.material.button.MaterialButton
-                        style="@style/CollapseLayout.Child.Pill"
-                        android:background="@drawable/pill_button_bg"
-                        android:text="Test"/>
-
-                    <com.google.android.material.button.MaterialButton
-                        style="@style/CollapseLayout.Child.Pill"
-                        android:background="@drawable/pill_button_bg"
-                        android:text="Test"/>
 
                     <com.google.android.material.button.MaterialButton
                         style="@style/CollapseLayout.Child.Pill"
@@ -84,6 +65,7 @@
                 style="@style/CollapseLayout.Child.HorizontalScrollView">
 
                 <LinearLayout
+                    android:id="@+id/sscategorie_insert_layout"
                     style="@style/CollapseLayout.Child.PillContainer">
 
                     <com.google.android.material.button.MaterialButton
@@ -120,6 +102,7 @@
                 style="@style/CollapseLayout.Child.HorizontalScrollView">
 
                 <LinearLayout
+                    android:id="@+id/sssscategorie_insert_layout"
                     style="@style/CollapseLayout.Child.PillContainer">
 
                     <com.google.android.material.button.MaterialButton
