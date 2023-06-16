@@ -58,19 +58,7 @@ public class RetreiveAlimentsTask implements Runnable {
             HttpClient httpclient = HttpClientBuilder.create().build();
             HttpGet httpget= new HttpGet(requestURL);
 
-            activity.findViewById(R.id.aliment_message).setVisibility(View.GONE);
-            activity.findViewById(R.id.aliment_loader).setVisibility(View.VISIBLE);
-
-            HttpResponse response = httpclient.execute(httpget, new ResponseHandler<HttpResponse>() {
-                @Override
-                public HttpResponse handleResponse(HttpResponse httpResponse) throws ClientProtocolException, IOException {
-                    activity.findViewById(R.id.aliment_loader).setVisibility(View.GONE);
-                    if(httpResponse == null) {
-                        activity.findViewById(R.id.aliment_message).setVisibility(View.GONE);
-                    }
-                    return httpResponse;
-                }
-            });
+            HttpResponse response = httpclient.execute(httpget);
 
             String alimentsJSONString = EntityUtils.toString(response.getEntity());
 
@@ -80,7 +68,10 @@ public class RetreiveAlimentsTask implements Runnable {
                 @Override
                 public void run() {
                     try {
-                        if (aliments == null) Toast.makeText(activity,"Fetch result is null", Toast.LENGTH_SHORT);
+                        if (aliments == null) {
+//                            activity.findViewById(R.id.aliment_message).setVisibility(View.VISIBLE);
+                            Toast.makeText(activity, "Fetch result is null", Toast.LENGTH_SHORT);
+                        }
                         else {
                             alimentLinearLayout.removeAllViews();
                             for (int i = 0; i < aliments.length(); i++) {
@@ -91,7 +82,7 @@ public class RetreiveAlimentsTask implements Runnable {
                                                 (String) aliment.get("nom_aliment")
                                         )
                                 );
-                                alimentLinearLayout.addView(new View(new ContextThemeWrapper(activity, R.style.Aliment_PillSpacer), null, 0));
+//                                alimentLinearLayout.addView(new View(new ContextThemeWrapper(activity, R.style.Aliment_PillSpacer), null, 0));
                             }
                         }
                     } catch (JSONException e) {

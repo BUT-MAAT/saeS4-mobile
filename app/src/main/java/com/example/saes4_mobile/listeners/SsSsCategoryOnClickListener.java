@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Handler;
 import android.os.Looper;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.saes4_mobile.R;
@@ -33,6 +34,7 @@ public class SsSsCategoryOnClickListener implements View.OnClickListener {
         categoryTitle.setText(
                 String.format(activity.getString(R.string.sssscatergorie_collapse_title), categoryName)
         );
+        ((LinearLayout) activity.findViewById(R.id.aliment_insert_layout)).removeAllViews();
         ExecutorService executor = Executors.newSingleThreadExecutor();
         executor.execute(
             new RetreiveAlimentsTask(activity,
@@ -41,5 +43,6 @@ public class SsSsCategoryOnClickListener implements View.OnClickListener {
                 new AlimentPillFactory(),
                 new Handler(Looper.getMainLooper())
         ));
+
     }
 }

@@ -59,7 +59,6 @@ public class RetreiveCategoriesTask implements Runnable {
             String categoriesJSONString = EntityUtils.toString(response.getEntity());
 
             JSONArray categories = new JSONArray(categoriesJSONString);
-            Log.d(TAG, categoriesJSONString);
             handler.post(new Runnable() {
                 @Override
                 public void run() {

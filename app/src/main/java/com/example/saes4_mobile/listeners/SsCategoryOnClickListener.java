@@ -36,6 +36,7 @@ public class SsCategoryOnClickListener implements View.OnClickListener {
         ((TextView) activity.findViewById(R.id.sssscategorie_collapse_title)).setText(
                 String.format(activity.getString(R.string.sssscatergorie_collapse_title), "Aucune")
         );
+        ((LinearLayout) activity.findViewById(R.id.aliment_insert_layout)).removeAllViews();
         ExecutorService executor = Executors.newSingleThreadExecutor();
         executor.execute(
             new RetreiveCategoriesTask(activity,

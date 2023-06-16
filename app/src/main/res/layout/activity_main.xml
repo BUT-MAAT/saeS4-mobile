@@ -133,11 +133,12 @@
                 android:layout_marginTop="40dp"
                 android:background="@color/light_blue">
 
-                <LinearLayout
+                <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
-<!--                    android:gravity="center_vertical">-->
+                    android:orientation="vertical"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp">
 
                     <TextView
                         android:id="@+id/aliment_message"
@@ -148,21 +149,15 @@
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"/>
 
-                    <ProgressBar
-                        android:id="@+id/aliment_loader"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:visibility="gone"/>
-
                     <LinearLayout
                         android:id="@+id/aliment_insert_layout"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"/>
+                        android:orientation="vertical">
 
+                    </LinearLayout>
 
-                </LinearLayout>
+                </FrameLayout>
 
             </ScrollView>
         </FrameLayout>
