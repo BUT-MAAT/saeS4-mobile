@@ -19,7 +19,7 @@ public class SelectedAlimentOnClickListener implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
-        SelectedAliments.remove(alimentId);
+        SelectedAliments.remove(activity, alimentId);
         ((LinearLayout) v.getParent()).removeView(v);
     }
 }

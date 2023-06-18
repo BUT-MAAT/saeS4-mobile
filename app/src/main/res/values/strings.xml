@@ -12,4 +12,5 @@
 
     <string name="no_aliments_message">Aucun aliment pour l\'instant</string>
     <string name="aliments_title">Aliments</string>
+    <string name="send_number_alim">%d/10</string>
 </resources>

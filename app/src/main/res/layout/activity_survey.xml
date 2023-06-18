@@ -5,14 +5,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".SurveyActivity"
     android:gravity="center_horizontal"
     android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="80dp"
         android:orientation="vertical">
 
         <FrameLayout
@@ -174,10 +177,10 @@
         android:layout_gravity="bottom">
 
         <HorizontalScrollView
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_marginRight="20dp">
+            android:layout_marginEnd="20dp">
 
             <LinearLayout
                 android:id="@+id/selected_insert_layout"
@@ -190,12 +193,23 @@
 
         </HorizontalScrollView>
 
-        <ImageView
+        <TextView
+            android:id="@+id/send_counter"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:src="@drawable/arrow_send"
+            android:gravity="center_vertical"
+            android:layout_marginEnd="10dp"
+            android:textColor="@color/white"
+            android:text="@string/send_number_alim" />
+
+        <ImageView
+            android:id="@+id/send_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
             android:layout_gravity="clip_vertical"
-            android:layout_marginRight="10dp"/>
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/arrow_send"
+            android:visibility="gone"/>
 
     </LinearLayout>
 

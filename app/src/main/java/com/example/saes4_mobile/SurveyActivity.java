@@ -1,5 +1,6 @@
 package com.example.saes4_mobile;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -13,17 +14,18 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.saes4_mobile.fetchtasks.RetreiveCategoriesTask;
 import com.example.saes4_mobile.listeners.CollapseLayoutListener;
+import com.example.saes4_mobile.listeners.SendArrowOnClicklistener;
 import com.example.saes4_mobile.pillfactories.CategoryPillFactory;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class MainActivity extends AppCompatActivity {
+public class SurveyActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_survey);
 
         LinearLayout collapseCatergorieLayout = (LinearLayout) findViewById(R.id.categorie_collapse_parent);
         LinearLayout collapseSsCatergorieLayout = (LinearLayout) findViewById(R.id.sscategorie_collapse_parent);
@@ -56,6 +58,13 @@ public class MainActivity extends AppCompatActivity {
         ));
 
         fetchFirstCategories();
+
+        ((TextView) findViewById(R.id.send_counter)).setText(
+                String.format(getString(R.string.send_number_alim), 0)
+        );
+        ((ImageView) findViewById(R.id.send_arrow)).setOnClickListener(
+                new SendArrowOnClicklistener(this)
+        );
     }
     private void fetchFirstCategories() {
         LinearLayout categoryLinearLayout = (LinearLayout) findViewById(R.id.categorie_insert_layout);

@@ -30,7 +30,7 @@ public class AlimentOnClickListener implements View.OnClickListener {
             Toast.makeText(activity, "Aliment deja dans la liste", Toast.LENGTH_SHORT).show();
             return;
         }
-        SelectedAliments.add(alimentId);
+        SelectedAliments.add(activity, alimentId);
         v.setOnClickListener(new SelectedAlimentOnClickListener(activity, alimentId));
         ((LinearLayout) v.getParent()).removeView(v);
         selectedLayout.addView(v);
