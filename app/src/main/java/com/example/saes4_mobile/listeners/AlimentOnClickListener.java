@@ -6,8 +6,7 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.example.saes4_mobile.R;
-import com.example.saes4_mobile.SelectedAliments;
-import com.google.android.material.button.MaterialButton;
+import com.example.saes4_mobile.data.SelectedAliments;
 
 public class AlimentOnClickListener implements View.OnClickListener {
 

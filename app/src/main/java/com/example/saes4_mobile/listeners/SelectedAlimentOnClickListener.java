@@ -4,8 +4,7 @@ import android.app.Activity;
 import android.view.View;
 import android.widget.LinearLayout;
 
-import com.example.saes4_mobile.R;
-import com.example.saes4_mobile.SelectedAliments;
+import com.example.saes4_mobile.data.SelectedAliments;
 
 public class SelectedAlimentOnClickListener implements View.OnClickListener {
 

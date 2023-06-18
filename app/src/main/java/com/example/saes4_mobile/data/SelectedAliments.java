@@ -1,4 +1,4 @@
-package com.example.saes4_mobile;
+package com.example.saes4_mobile.data;
 
 import android.app.Activity;
 import android.graphics.Color;
@@ -7,6 +7,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.saes4_mobile.R;
 import com.example.saes4_mobile.listeners.SendArrowOnClicklistener;
 
 import java.util.ArrayList;

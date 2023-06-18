@@ -1,5 +1,6 @@
 package com.example.saes4_mobile;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -12,6 +13,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.saes4_mobile.apitasks.RetreiveCategoriesTask;
+import com.example.saes4_mobile.data.SurveyIsCompleted;
 import com.example.saes4_mobile.listeners.CollapseLayoutListener;
 import com.example.saes4_mobile.listeners.SendArrowOnClicklistener;
 import com.example.saes4_mobile.pillfactories.CategoryPillFactory;
@@ -24,6 +26,10 @@ public class SurveyActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if (SurveyIsCompleted.isSurveyCompleted()) {
+            Intent intent = new Intent(this, SuccessActivity.class);
+            startActivity(intent);
+        }
         setContentView(R.layout.activity_survey);
 
         LinearLayout collapseCatergorieLayout = (LinearLayout) findViewById(R.id.categorie_collapse_parent);
