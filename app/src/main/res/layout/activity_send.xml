@@ -6,7 +6,92 @@
     android:layout_height="match_parent"
     tools:context=".SendActivity"
     android:gravity="center_horizontal"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="20dp">
 
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="@string/send_title"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="20dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Send.Input.Layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/send_inputLastName"
+                style="@style/Send.Input"
+                android:inputType="text"
+                android:textColorPrimary="#FF11AA"
+                tools:ignore="VisualLintTextFieldSize,TextContrastCheck"
+                android:hint="@string/send_information_lastname" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/send_inputName"
+                style="@style/Send.Input"
+                android:inputType="text"
+                android:hint="@string/send_information_name"
+                tools:ignore="VisualLintTextFieldSize,TextContrastCheck" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/send_inputMail"
+                style="@style/Send.Input"
+                android:inputType="textEmailAddress"
+                android:hint="@string/send_information_email"
+                tools:ignore="VisualLintTextFieldSize,TextContrastCheck" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/send_inputZipCode"
+                style="@style/Send.Input"
+                android:inputType="numberDecimal"
+                android:hint="@string/send_information_zipcode"
+                tools:ignore="VisualLintTextFieldSize,TextContrastCheck" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/send_inputCity"
+                style="@style/Send.Input"
+                android:inputType="text"
+                android:hint="@string/send_information_city"
+                tools:ignore="VisualLintTextFieldSize,TextContrastCheck" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:layout_marginTop="20dp"
+        android:id="@+id/submit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="@string/send_submit_text"
+        android:drawableEnd="@drawable/arrow_send" />
 
 </LinearLayout>

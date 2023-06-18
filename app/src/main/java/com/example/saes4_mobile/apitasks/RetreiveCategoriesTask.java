@@ -1,4 +1,4 @@
-package com.example.saes4_mobile.fetchtasks;
+package com.example.saes4_mobile.apitasks;
 
 import android.app.Activity;
 import android.os.Handler;

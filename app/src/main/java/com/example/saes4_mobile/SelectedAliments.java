@@ -41,7 +41,7 @@ public class SelectedAliments {
     }
 
     public static void remove(Activity activity, int id) {
-        alimentIds.remove(alimentIds.indexOf(id));
+        alimentIds.remove((Integer) id);
 
         ImageView sendArrowButton = activity.findViewById(R.id.send_arrow);
         sendArrowButton.setVisibility(View.GONE);

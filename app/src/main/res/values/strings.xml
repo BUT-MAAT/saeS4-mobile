@@ -13,4 +13,12 @@
     <string name="no_aliments_message">Aucun aliment pour l\'instant</string>
     <string name="aliments_title">Aliments</string>
     <string name="send_number_alim">%d/10</string>
+
+    <string name="send_title">Informations personnelles</string>
+    <string name="send_information_lastname">Nom</string>
+    <string name="send_information_name">Prénom</string>
+    <string name="send_information_email">Email</string>
+    <string name="send_information_zipcode">Code postal</string>
+    <string name="send_information_city">Ville</string>
+    <string name="send_submit_text">Submit</string>
 </resources>

@@ -1,6 +1,5 @@
 package com.example.saes4_mobile;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -12,7 +11,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.saes4_mobile.fetchtasks.RetreiveCategoriesTask;
+import com.example.saes4_mobile.apitasks.RetreiveCategoriesTask;
 import com.example.saes4_mobile.listeners.CollapseLayoutListener;
 import com.example.saes4_mobile.listeners.SendArrowOnClicklistener;
 import com.example.saes4_mobile.pillfactories.CategoryPillFactory;
@@ -62,7 +61,7 @@ public class SurveyActivity extends AppCompatActivity {
         ((TextView) findViewById(R.id.send_counter)).setText(
                 String.format(getString(R.string.send_number_alim), 0)
         );
-        ((ImageView) findViewById(R.id.send_arrow)).setOnClickListener(
+        findViewById(R.id.send_arrow).setOnClickListener(
                 new SendArrowOnClicklistener(this)
         );
     }

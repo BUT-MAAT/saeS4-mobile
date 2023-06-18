@@ -8,7 +8,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.saes4_mobile.R;
-import com.example.saes4_mobile.fetchtasks.RetreiveAlimentsTask;
+import com.example.saes4_mobile.apitasks.RetreiveAlimentsTask;
 import com.example.saes4_mobile.pillfactories.AlimentPillFactory;
 
 import java.util.concurrent.ExecutorService;

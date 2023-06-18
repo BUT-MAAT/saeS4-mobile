@@ -1,4 +1,4 @@
-package com.example.saes4_mobile.fetchtasks;
+package com.example.saes4_mobile.apitasks;
 
 import android.app.Activity;
 import android.os.Handler;
@@ -6,7 +6,6 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.example.saes4_mobile.R;
-import com.example.saes4_mobile.pillfactories.AlimentPillFactory;
 import com.example.saes4_mobile.pillfactories.PillFactory;
 import com.google.firebase.crashlytics.buildtools.reloc.org.apache.http.HttpResponse;
 import com.google.firebase.crashlytics.buildtools.reloc.org.apache.http.client.HttpClient;
