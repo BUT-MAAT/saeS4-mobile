@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Handler;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.example.saes4_mobile.R;
 import com.example.saes4_mobile.SendActivity;
@@ -48,9 +49,7 @@ public class SendResultsTask implements Runnable {
 
     @Override
     public void run() {
-
         try {
-
             final HttpPost httpPost = new HttpPost(String.format(
                     activity.getResources().getString(R.string.api_url),
                     path)
@@ -69,6 +68,10 @@ public class SendResultsTask implements Runnable {
                 if (response.getStatusLine().getStatusCode() == HttpsURLConnection.HTTP_OK) {
                     Intent intent = new Intent(activity, SuccessActivity.class);
                     activity.startActivity(intent);
+                }
+                else {
+                    Toast.makeText(activity, activity.getString(R.string.error_info_unknownormail), Toast.LENGTH_LONG)
+                            .show();
                 }
             });
         }
