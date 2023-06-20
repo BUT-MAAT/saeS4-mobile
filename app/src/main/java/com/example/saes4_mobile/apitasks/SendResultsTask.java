@@ -58,7 +58,7 @@ public class SendResultsTask implements Runnable {
             final StringEntity entity = new StringEntity(stringifyMap(data));
             httpPost.setEntity(entity);
             httpPost.setHeader("Accept", "application/json");
-            httpPost.setHeader("Content-type", "application/json");
+            httpPost.setHeader("Content-Type", "application/json;charset=UTF-8");
 
             CloseableHttpClient client = HttpClients.createDefault();
             CloseableHttpResponse response = (CloseableHttpResponse) client

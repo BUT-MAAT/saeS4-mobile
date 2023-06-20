@@ -13,20 +13,26 @@ public class AlimentOnClickListener implements View.OnClickListener {
     private Activity activity;
     private int alimentId;
 
+    private Toast toast;
+
     public AlimentOnClickListener(Activity activity, int alimentId) {
         this.activity = activity;
         this.alimentId = alimentId;
+        this.toast = Toast.makeText(activity, "", Toast.LENGTH_SHORT);
     }
 
     @Override
     public void onClick(View v) {
         LinearLayout selectedLayout = activity.findViewById(R.id.selected_insert_layout);
+        toast.cancel();
         if (SelectedAliments.nbSelection() >= 10) {
-            Toast.makeText(activity, "Il y a deja 10 aliments dans la liste", Toast.LENGTH_SHORT).show();
+            toast = Toast.makeText(activity, "Il y a deja 10 aliments dans la liste", Toast.LENGTH_SHORT);
+            toast.show();
             return;
         }
         if (SelectedAliments.contains(alimentId)) {
-            Toast.makeText(activity, "Aliment deja dans la liste", Toast.LENGTH_SHORT).show();
+            toast = Toast.makeText(activity, "Aliment deja dans la liste", Toast.LENGTH_SHORT);
+            toast.show();
             return;
         }
         SelectedAliments.add(activity, alimentId);

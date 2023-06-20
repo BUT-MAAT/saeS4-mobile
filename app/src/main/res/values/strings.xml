@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Sondage habitudes de consommation</string>
 
-    <string name="api_url">http://10.10.25.27:9000/api/%s</string>
+    <string name="api_url">http://192.168.1.12:9000/api/%s</string>
     <string name="api_categories_all_path">categories/categorie/all</string>
     <string name="api_categories_byParentId_path">categories/by_parent/%d</string>
     <string name="api_aliments_byCategoryId_path">aliment/by_soussouscategorie/%d?valeurs_nutritives=false</string>
