@@ -2,6 +2,7 @@ package com.example.saes4_mobile.apitasks;
 
 import android.app.Activity;
 import android.os.Handler;
+import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
@@ -58,6 +59,8 @@ public class RetreiveAlimentsTask implements Runnable {
                 @Override
                 public void run() {
                     try {
+                        activity.findViewById(R.id.aliment_loader).setVisibility(View.GONE);
+                        activity.findViewById(R.id.aliment_message).setVisibility(View.VISIBLE);
                         if (aliments == null) {
                             Toast.makeText(activity, "Aucun résultat trouvé", Toast.LENGTH_SHORT);
                         }
@@ -71,7 +74,6 @@ public class RetreiveAlimentsTask implements Runnable {
                                                 (String) aliment.get("nom_aliment")
                                         )
                                 );
-//                                alimentLinearLayout.addView(new View(new ContextThemeWrapper(activity, R.style.Aliment_PillSpacer), null, 0));
                             }
                         }
                     } catch (JSONException e) {

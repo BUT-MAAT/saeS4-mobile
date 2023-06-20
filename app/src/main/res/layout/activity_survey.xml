@@ -151,6 +151,16 @@
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"/>
 
+                    <ProgressBar
+                        android:id="@+id/aliment_loader"
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:indeterminate="true"
+                        android:indeterminateTintMode="src_atop"
+                        android:indeterminateTint="@color/dark_blue"/>
+
                     <LinearLayout
                         android:id="@+id/aliment_insert_layout"
                         android:layout_width="match_parent"

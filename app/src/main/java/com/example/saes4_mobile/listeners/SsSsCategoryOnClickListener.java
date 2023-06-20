@@ -33,6 +33,10 @@ public class SsSsCategoryOnClickListener implements View.OnClickListener {
                 String.format(activity.getString(R.string.sssscatergorie_collapse_title), categoryName)
         );
         ((LinearLayout) activity.findViewById(R.id.aliment_insert_layout)).removeAllViews();
+
+        activity.findViewById(R.id.aliment_loader).setVisibility(View.VISIBLE);
+        activity.findViewById(R.id.aliment_message).setVisibility(View.GONE);
+
         ExecutorService executor = Executors.newSingleThreadExecutor();
         executor.execute(
             new RetreiveAlimentsTask(activity,
