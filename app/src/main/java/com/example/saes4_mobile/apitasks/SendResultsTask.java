@@ -3,15 +3,10 @@ package com.example.saes4_mobile.apitasks;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Handler;
-import android.util.Log;
 import android.widget.Toast;
 
 import com.example.saes4_mobile.R;
-import com.example.saes4_mobile.SendActivity;
 import com.example.saes4_mobile.SuccessActivity;
-import com.google.firebase.crashlytics.buildtools.reloc.org.apache.http.HttpResponse;
-import com.google.firebase.crashlytics.buildtools.reloc.org.apache.http.client.ClientProtocolException;
-import com.google.firebase.crashlytics.buildtools.reloc.org.apache.http.client.ResponseHandler;
 import com.google.firebase.crashlytics.buildtools.reloc.org.apache.http.client.methods.CloseableHttpResponse;
 import com.google.firebase.crashlytics.buildtools.reloc.org.apache.http.client.methods.HttpPost;
 import com.google.firebase.crashlytics.buildtools.reloc.org.apache.http.entity.StringEntity;
@@ -21,12 +16,6 @@ import com.google.firebase.crashlytics.buildtools.reloc.org.apache.http.protocol
 
 import org.json.JSONObject;
 
-import java.io.BufferedWriter;
-import java.io.IOException;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.util.Map;
 
 import javax.net.ssl.HttpsURLConnection;

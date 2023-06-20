@@ -3,7 +3,6 @@ package com.example.saes4_mobile.listeners;
 import android.app.Activity;
 import android.content.Intent;
 import android.view.View;
-import android.widget.Toast;
 
 import com.example.saes4_mobile.SendActivity;
 

@@ -2,7 +2,6 @@ package com.example.saes4_mobile.apitasks;
 
 import android.app.Activity;
 import android.os.Handler;
-import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 

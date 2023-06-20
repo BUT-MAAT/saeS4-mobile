@@ -9,8 +9,8 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.example.saes4_mobile.R;
-import com.example.saes4_mobile.data.SelectedAliments;
 import com.example.saes4_mobile.apitasks.SendResultsTask;
+import com.example.saes4_mobile.data.SelectedAliments;
 import com.google.android.material.textfield.TextInputEditText;
 
 import java.util.ArrayList;
@@ -19,8 +19,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-
-import kotlin.text.Regex;
 
 public class SubmitButtonOnClickListener implements View.OnClickListener {
 
